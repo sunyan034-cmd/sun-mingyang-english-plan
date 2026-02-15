@@ -1,329 +1,559 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>孙明阳英语冲刺计划</title>
-<style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 30px; color: #333; background: #fff; }
-h1 { color: #2c3e50; border-bottom: 4px solid #3498db; padding-bottom: 15px; font-size: 28px; }
-h2 { color: #34495e; border-left: 5px solid #3498db; padding-left: 20px; margin-top: 40px; font-size: 22px; }
-h3 { color: #555; margin-top: 30px; font-size: 18px; }
-table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 14px; }
-th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-th { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-weight: 600; }
-tr:nth-child(even) { background-color: #f8f9fa; }
-tr:hover { background-color: #e3f2fd; }
-code { background-color: #f4f4f4; padding: 3px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; }
-pre { background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #3498db; overflow-x: auto; font-size: 13px; line-height: 1.6; }
-blockquote { border-left: 5px solid #3498db; margin: 20px 0; padding: 15px 25px; background: #f8f9fa; color: #555; font-style: italic; border-radius: 0 8px 8px 0; }
-ul, ol { padding-left: 30px; }
-li { margin: 10px 0; }
-.highlight { background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #f39c12; margin: 20px 0; }
-.success { background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #28a745; margin: 20px 0; }
-.warning { background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); padding: 20px; border-radius: 8px; border-left: 5px solid #dc3545; margin: 20px 0; }
-.timeline { background: #f8f9fa; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 14px; line-height: 2; text-align: center; }
-.checklist { list-style: none; padding-left: 0; }
-.checklist li:before { content: "☐ "; font-size: 18px; margin-right: 10px; color: #3498db; }
-.motto { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; text-align: center; font-size: 16px; line-height: 2; margin: 40px 0; }
-.footer { text-align: center; font-size: 24px; color: #e74c3c; font-weight: bold; margin-top: 50px; padding: 30px; border-top: 3px solid #eee; }
-@media print {
-  body { margin: 15px; font-size: 12px; }
-  h1 { font-size: 20px; }
-  h2 { font-size: 16px; }
-  h3 { font-size: 14px; }
-  table { font-size: 11px; }
-  th, td { padding: 8px; }
-  .motto { padding: 20px; font-size: 14px; }
-  .highlight, .success, .warning { padding: 15px; }
-  page-break-inside: avoid;
-}
-@media (max-width: 600px) {
-  body { padding: 15px; margin: 20px auto; }
-  h1 { font-size: 22px; }
-  h2 { font-size: 18px; }
-  table { font-size: 12px; }
-  th, td { padding: 8px; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙明阳英语冲刺计划 - 最终版</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        h3 {
+            color: #764ba2;
+            font-size: 20px;
+            margin: 25px 0 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        tr:hover {
+            background: #e3f2fd;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .success-box {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .time-section {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+        .time-section h4 {
+            color: #667eea;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        blockquote {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        ul, ol {
+            padding-left: 30px;
+            margin: 15px 0;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 18px;
+            color: #667eea;
+            margin-right: 10px;
+        }
+        .motto {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 2;
+            margin: 30px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 13px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #eee;
+            margin: 30px 0;
+        }
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+        }
+        @media (max-width: 600px) {
+            .content { padding: 20px; }
+            .header { padding: 20px; }
+            .header h1 { font-size: 24px; }
+            table { font-size: 12px; }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 孙明阳英语冲刺计划 - 最终版</h1>
+            <p class="subtitle">2026年2月-8月 | 停掉幼小衔接 | 山东枣庄 | 重点听力+口语</p>
+        </div>
+        
+        <div class="content">
+            <h2>📊 当前水平总结</h2>
+            <table>
+                <tr>
+                    <th>维度</th>
+                    <th>现状</th>
+                    <th>6个月目标</th>
+                </tr>
+                <tr>
+                    <td><strong>词汇</strong></td>
+                    <td>150词（颜色/动物/数字/身体部位）</td>
+                    <td>能用于日常对话</td>
+                </tr>
+                <tr>
+                    <td><strong>句型</strong></td>
+                    <td>能说5-8词短句</td>
+                    <td>能进行多轮对话</td>
+                </tr>
+                <tr>
+                    <td><strong>听力</strong></td>
+                    <td>Peppa 10-30%（看画面猜）</td>
+                    <td>能听懂课堂70%+</td>
+                </tr>
+                <tr>
+                    <td><strong>拼读</strong></td>
+                    <td>元音组合收尾</td>
+                    <td>能自主读简单绘本</td>
+                </tr>
+                <tr>
+                    <td><strong>输出</strong></td>
+                    <td>中英混杂，需要想</td>
+                    <td>能直接英语反应</td>
+                </tr>
+            </table>
 
-<h1>🎯 孙明阳英语冲刺计划（2026年2月-8月）</h1>
+            <div class="highlight-box">
+                <strong>核心问题：</strong>有词汇但不会串联，缺语言环境，听力是短板
+                <br><br>
+                <strong>🎯 6个月目标：</strong>从"会单词" → 到"能对话" → 到"敢开口"
+            </div>
 
-<hr style="border: none; border-top: 3px solid #eee; margin: 30px 0;">
+            <h2>⏰ 每日时间安排（参考）</h2>
+            
+            <div class="time-section">
+                <h4>🌅 上午时段（建议9:00-11:00）</h4>
+                <table>
+                    <tr>
+                        <th>时间</th>
+                        <th>活动</th>
+                        <th>时长</th>
+                        <th>妈妈角色</th>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td><strong>外教1v1</strong> 👨‍🏫</td>
+                        <td>25分钟</td>
+                        <td>提前5分钟调试设备，课后竖大拇指</td>
+                    </tr>
+                    <tr>
+                        <td>10:30</td>
+                        <td><strong>数学</strong> 🔢</td>
+                        <td>20分钟</td>
+                        <td>陪坐，维持纪律</td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td><strong>英语音频</strong> 🎧</td>
+                        <td>30-60分钟</td>
+                        <td>放给他听，不用管，做家务也行</td>
+                    </tr>
+                </table>
+            </div>
 
-<h2>📊 孩子现状评估</h2>
-<table>
-<tr><th>维度</th><th>当前水平</th><th>目标状态</th></tr>
-<tr><td><strong>年龄</strong></td><td>6岁半</td><td>7岁入学Year 2</td></tr>
-<tr><td><strong>拼读</strong></td><td>✅ 学习中（8月学完）</td><td>能自主阅读</td></tr>
-<tr><td><strong>词汇</strong></td><td>⚠️ 孤立单词</td><td>能串联使用</td></tr>
-<tr><td><strong>听力</strong></td><td>❌ 听不懂整句</td><td>听懂课堂指令</td></tr>
-<tr><td><strong>口语</strong></td><td>❌ 不会表达</td><td>敢说简单句</td></tr>
-</table>
+            <div class="time-section">
+                <h4>🌞 下午时段（建议15:00-17:00）</h4>
+                <table>
+                    <tr>
+                        <th>时间</th>
+                        <th>活动</th>
+                        <th>时长</th>
+                        <th>妈妈角色</th>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td><strong>分级阅读</strong> 📚</td>
+                        <td>30分钟</td>
+                        <td><strong>坐旁边</strong>，翻页、维持坐姿</td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td><strong>英语动画</strong> 📺</td>
+                        <td>20分钟</td>
+                        <td>陪着看，指着图重复关键词</td>
+                    </tr>
+                </table>
+            </div>
 
-<div class="highlight">
-<strong>🎯 核心目标：</strong>6个月建立「声音↔意思」直接链接，8月能跟上国际学校课堂
-</div>
+            <div class="time-section">
+                <h4>🌙 晚上时段（建议20:00-21:00）</h4>
+                <table>
+                    <tr>
+                        <th>时间</th>
+                        <th>活动</th>
+                        <th>时长</th>
+                        <th>妈妈角色</th>
+                    </tr>
+                    <tr>
+                        <td>20:00</td>
+                        <td><strong>亲子阅读</strong> 📖</td>
+                        <td>15分钟</td>
+                        <td>坐旁边，翻页、鼓励、拥抱</td>
+                    </tr>
+                    <tr>
+                        <td>20:30</td>
+                        <td><strong>睡前音频</strong> 🌟</td>
+                        <td>30分钟</td>
+                        <td>放着就行，不用管</td>
+                    </tr>
+                </table>
+            </div>
 
-<h2>🗓️ 6个月里程碑</h2>
-<div class="timeline">
-2-3月　　　　4-5月　　　　6-7月　　　　8月<br>
-　│　　　　　　│　　　　　　│　　　　　　│<br>
-　▼　　　　　　▼　　　　　　▼　　　　　　▼<br>
-建立习惯 → 听懂指令 → 整句输出 → 顺利入学
-</div>
+            <div class="success-box">
+                <strong>每天英语时间：约2小时</strong> ⏱️
+                <br>
+                外教25分 + 音频90分 + 阅读45分 + 动画20分
+                <br><br>
+                <strong>💡 关键原则：</strong>不求每分每秒都在学，但求每天都有接触！
+            </div>
 
-<table>
-<tr><th>时间节点</th><th>🎯 达成目标</th></tr>
-<tr><td><strong>3月底</strong></td><td>听懂10个基础指令（Stand up/Sit down...）无需翻译</td></tr>
-<tr><td><strong>5月底</strong></td><td>能回答姓名年龄，主动说"Toilet/Water/Help"</td></tr>
-<tr><td><strong>8月初</strong></td><td>听懂老师70%日常指令，跟上Year 2课堂节奏</td></tr>
-</table>
+            <h2>🛒 资源清单</h2>
+            <h3>✅ 已有资源</h3>
+            <table>
+                <tr>
+                    <th>资源</th>
+                    <th>用途</th>
+                    <th>怎么用</th>
+                </tr>
+                <tr>
+                    <td><strong>毛毛虫点读笔</strong></td>
+                    <td>分级阅读</td>
+                    <td>点牛津树/RAZ，听发音</td>
+                </tr>
+                <tr>
+                    <td><strong>YouTube会员</strong></td>
+                    <td>动画+音频</td>
+                    <td>家里的appletv直接用</td>
+                </tr>
+                <tr>
+                    <td><strong>Netflix会员</strong></td>
+                    <td>动画</td>
+                    <td>找Bluey/Octonauts英文版</td>
+                </tr>
+            </table>
 
-<h2>⏰ 每日学习安排（妈妈执行版）</h2>
+            <h3>🛒 需要购买</h3>
+            <table>
+                <tr>
+                    <th>物品</th>
+                    <th>预算</th>
+                    <th>去哪买</th>
+                    <th>备注</th>
+                </tr>
+                <tr>
+                    <td><strong>外教课</strong></td>
+                    <td>¥8,000-10,000</td>
+                    <td>51Talk/阿卡索</td>
+                    <td>买180节课，每周5节</td>
+                </tr>
+                <tr>
+                    <td><strong>牛津树L2-L4</strong></td>
+                    <td>¥400</td>
+                    <td>淘宝祖国版</td>
+                    <td>橙标或彩虹花，带毛毛虫点读</td>
+                </tr>
+                <tr>
+                    <td><strong>RAZ B-C级</strong></td>
+                    <td>¥300</td>
+                    <td>淘宝祖国版</td>
+                    <td>祖国版，配点读包</td>
+                </tr>
+            </table>
 
-<h3>📅 周一到周五（上学日）</h3>
-<table>
-<tr><th>时间</th><th>📚 内容</th><th>📝 做什么</th><th>⏱️ 时长</th></tr>
-<tr><td><strong>放学后</strong></td><td>👨‍🏫 外教1v1</td><td>手机/iPad上课，家长不用管</td><td>25分钟</td></tr>
-<tr><td><strong>晚饭后</strong></td><td>📺 Peppa Pig</td><td>固定1集，反复看3遍，指图说词</td><td>30分钟</td></tr>
-<tr><td><strong>睡前</strong></td><td>📖 RAZ绘本</td><td>点读笔点读，看图听，不强迫跟读</td><td>10分钟</td></tr>
-</table>
+            <div class="highlight-box">
+                <strong>总预算：约¥9,000</strong>
+            </div>
 
-<h3>🌟 周末</h3>
-<table>
-<tr><th>时间</th><th>📚 内容</th><th>📝 做什么</th></tr>
-<tr><td><strong>上午</strong></td><td>🌳 牛津树</td><td>家长讲图片故事，孩子指认</td></tr>
-<tr><td><strong>下午</strong></td><td>👨‍🏫 外教1v1</td><td>复习本周内容</td></tr>
-<tr><td><strong>全天</strong></td><td>🏠 家庭TPR</td><td>生活中用英语发指令</td></tr>
-</table>
+            <h2>📖 具体执行方案</h2>
+            
+            <h3>1️⃣ 外教课（每周5节，周一到周五9:00）</h3>
+            <blockquote>
+                <strong>第一节课给老师的留言（复制粘贴）：</strong>
+                <br><br>
+                👋 老师好！我是孙明阳，6岁半，山东枣庄。
+                <br><br>
+                <strong>我的情况：</strong>
+                <ul>
+                    <li>认识150个单词（颜色、动物、数字、身体部位）</li>
+                    <li>会说5-8个词的句子（I like red apples）</li>
+                    <li>正在学自然拼读，快学完了</li>
+                    <li>但是听力不太好，看Peppa Pig只能看懂一点点</li>
+                    <li>说英语时需要先想中文，再翻译</li>
+                </ul>
+                <strong>我的目标：</strong>2026年8月去马来西亚国际学校读Year 2，需要能听懂老师、和同学说话。
+                <br><br>
+                <strong>请老师帮我：</strong>
+                <ol>
+                    <li><strong>多跟我说话</strong>，让我习惯听英语</li>
+                    <li><strong>说慢一点</strong>，等我反应过来</li>
+                    <li><strong>让我多开口</strong>，不要怕错</li>
+                    <li><strong>教我说：</strong>
+                        <ul>
+                            <li>问问题：What's this? / Can you repeat?</li>
+                            <li>说需求：I want... / I need... / Can I...?</li>
+                            <li>描述：This is... / I see... / I have...</li>
+                            <li>课堂用语：Line up / Open your book / I don't understand</li>
+                        </ul>
+                    </li>
+                </ol>
+                <strong>每节课请这样安排：</strong>
+                <ul>
+                    <li>5分钟：Free talk（问我今天做了什么）</li>
+                    <li>10分钟：主题对话（天气/食物/玩具/学校）</li>
+                    <li>5分钟：读绘本或卡片，问我问题</li>
+                    <li>5分钟：游戏或角色扮演</li>
+                </ul>
+                谢谢老师！🙏
+            </blockquote>
 
-<h2>🛒 购物清单（预算约¥9,000）</h2>
+            <h3>2️⃣ 磨耳朵音频（每天30-60分钟）</h3>
+            <table>
+                <tr>
+                    <th>类型</th>
+                    <th>推荐资源</th>
+                    <th>时长</th>
+                    <th>听法</th>
+                </tr>
+                <tr>
+                    <td><strong>儿歌</strong></td>
+                    <td>Super Simple Songs / Pinkfong</td>
+                    <td>10-15分钟</td>
+                    <td>边玩边听，不要求跟唱</td>
+                </tr>
+                <tr>
+                    <td><strong>故事</strong></td>
+                    <td>牛津树音频 / RAZ音频</td>
+                    <td>15-20分钟</td>
+                    <td>听过绘本后再听音频</td>
+                </tr>
+                <tr>
+                    <td><strong>动画音频</strong></td>
+                    <td>Bluey音频 / Peppa音频</td>
+                    <td>15-20分钟</td>
+                    <td>看过动画后再听</td>
+                </tr>
+            </table>
 
-<h3>⭐ 必买清单</h3>
-<table>
-<tr><th>优先级</th><th>物品</th><th>买哪款</th><th>💰 价格</th><th>🛍️ 去哪买</th></tr>
-<tr><td>🔴 1</td><td><strong>外教课</strong></td><td>51Talk菲律宾外教，选"幼儿启蒙"标签</td><td>¥8,100</td><td>51Talk APP</td></tr>
-<tr><td>🔴 2</td><td><strong>RAZ绘本</strong></td><td>A级+B级+C级（祖国版）带点读笔套餐</td><td>¥500</td><td>淘宝搜"RAZ分级阅读"</td></tr>
-<tr><td>🟡 3</td><td><strong>牛津树</strong></td><td>L1-L3（祖国版）橙标或彩虹花版</td><td>¥350</td><td>淘宝</td></tr>
-<tr><td>🟡 4</td><td><strong>点读笔</strong></td><td>小达人/毛毛虫（如套餐不含）</td><td>¥250</td><td>淘宝</td></tr>
-<tr><td>🟢 5</td><td><strong>动画资源</strong></td><td>Peppa Pig第一季（B站/YouTube）</td><td>¥0</td><td>网络</td></tr>
-</table>
+            <div class="success-box">
+                <strong>关键：</strong>
+                <ul>
+                    <li>✅ <strong>不求听懂每个词</strong>，培养语感和语音语调</li>
+                    <li>✅ <strong>重复听</strong>，一周听3-5遍同一首/集</li>
+                    <li>✅ <strong>不强迫跟读</strong>，纯输入阶段</li>
+                </ul>
+            </div>
 
-<div class="highlight">
-💡 <strong>可选：</strong>《美国家庭万用亲子英文》¥50（选基础指令章节）
-</div>
+            <h3>3️⃣ 分级阅读（每天30分钟，妈妈陪）</h3>
+            <div class="highlight-box">
+                <strong>妈妈任务（0英语也能做）：</strong>
+                <ol>
+                    <li><strong>坐旁边</strong>，翻页</li>
+                    <li><strong>点读笔点一下</strong>，听一遍</li>
+                    <li><strong>再点一下</strong>，让孩子跟读（不强迫）</li>
+                    <li><strong>翻下一页</strong>，重复</li>
+                    <li><strong>读完竖大拇指</strong>，说"真棒"（中文）</li>
+                </ol>
+            </div>
 
-<h2>📖 具体执行指南</h2>
+            <h3>4️⃣ 动画（每天20分钟，分2次，护眼）</h3>
+            <table>
+                <tr>
+                    <th>动画</th>
+                    <th>难度</th>
+                    <th>特点</th>
+                </tr>
+                <tr>
+                    <td><strong>Numberblocks</strong> ⭐</td>
+                    <td>⭐⭐</td>
+                    <td>数学+英语，语速慢</td>
+                </tr>
+                <tr>
+                    <td><strong>Alphablocks</strong> ⭐</td>
+                    <td>⭐⭐</td>
+                    <td>自然拼读动画</td>
+                </tr>
+                <tr>
+                    <td><strong>Bluey</strong></td>
+                    <td>⭐⭐⭐</td>
+                    <td>家庭日常，语速适中</td>
+                </tr>
+                <tr>
+                    <td><strong>Paw Patrol</strong></td>
+                    <td>⭐⭐⭐</td>
+                    <td>任务指令清晰</td>
+                </tr>
+            </table>
 
-<h3>1️⃣ 外教课（每天25分钟）</h3>
+            <h2>✅ 每周检查清单（妈妈版）</h2>
+            <p>📌 <strong>使用方法：</strong>每完成一项打个✓，周末回顾进度</p>
 
-<p><strong>📝 第一节课给老师的留言</strong>（复制粘贴）：</p>
+            <div class="success-box">
+                <h4>第1-4周（2-3月）目标：习惯养成</h4>
+                <ul class="checklist">
+                    <li>外教课每天上，孩子不抗拒</li>
+                    <li>能跟读牛津树L2句子（不要求自主读）</li>
+                    <li>每天听英语音频30分钟以上</li>
+                    <li>动画每天看20分钟，分2次</li>
+                </ul>
+            </div>
 
-<blockquote>
-👋 老师您好！我儿子6岁半，学过一些自然拼读和单词，但<strong>听不懂整句英语</strong>。<br><br>
-🎯 <strong>请用TPR方法（动作+指令）教学：</strong><br>
-1. 只说指令让他做动作（Stand up, Sit down, Touch your head）<br>
-2. 不要强迫说长句子，愿意说单词就行<br>
-3. 多用图片、玩具、动作辅助<br>
-4. 请说得慢一些、夸张一些<br><br>
-🎯 <strong>目标：</strong>8月去马来西亚国际学校，能听懂课堂指令
-</blockquote>
+            <div class="success-box">
+                <h4>第5-8周（3-4月）目标：听力突破</h4>
+                <ul class="checklist">
+                    <li>外教课能回答5个以上问题（不一定对）</li>
+                    <li>牛津树L3开始，尝试自己指读单词</li>
+                    <li>能听懂儿歌歌词的50%以上</li>
+                    <li>听到"Clean up""Line up"能做出反应</li>
+                </ul>
+            </div>
 
-<p><strong>🔁 前3个月重点指令</strong>（让外教循环教）：</p>
-<pre><code>Stand up / Sit down
-Clap your hands / Touch your head
-Show me red / blue / green
-Big / Small / Jump / Run / Walk</code></pre>
+            <div class="success-box">
+                <h4>第9-12周（4-5月）目标：口语起步</h4>
+                <ul class="checklist">
+                    <li>外教课能主动说3句以上整句</li>
+                    <li>能表达需求：I want... / Can I...?</li>
+                    <li>牛津树L4，自主读50%单词</li>
+                    <li>RAZ B级，读完后能指图回答What's this?</li>
+                </ul>
+            </div>
 
-<h3>2️⃣ Peppa Pig动画（每天30分钟）</h3>
+            <h2>🆘 妈妈Q&A</h2>
+            <p><strong>Q：我完全不会英语，怎么陪他读？</strong><br>
+            A：你不需要会英语，只需要<strong>坐着、翻页、按点读笔、鼓掌</strong>。点读笔是老师，你是陪伴者。</p>
 
-<p><strong>🎬 操作步骤（三遍法）：</strong></p>
-<table>
-<tr><th>遍数</th><th>做什么</th><th>目标</th></tr>
-<tr><td><strong>第1遍</strong></td><td>正常看，不说话</td><td>熟悉画面和声音</td></tr>
-<tr><td><strong>第2遍</strong></td><td>指着图说单词："Peppa" "Jump" "Muddy"</td><td>建立声音↔图像链接</td></tr>
-<tr><td><strong>第3遍</strong></td><td>问简单问题："Where is Peppa?"（指图回答）</td><td>验证理解</td></tr>
-</table>
+            <p><strong>Q：孩子不想读/不想上外教课怎么办？</strong><br>
+            A：先坚持5分钟，5分钟后不想就停。第二天再试。习惯是慢慢养成的，不要逼。</p>
 
-<p><strong>🎬 推荐集数：</strong></p>
-<ul>
-<li>✅ S1E1 Muddy Puddles（跳泥坑）</li>
-<li>✅ S1E2 Mr Dinosaur is Lost（找恐龙）</li>
-</ul>
+            <p><strong>Q：读错了要不要纠正？</strong><br>
+            A：<strong>不要纠正</strong>。示范正确读法即可。比如他说"I like apple"，你说"Oh, you like apples. I like apples too."</p>
 
-<div class="warning">
-⚠️ <strong>关键：</strong>不要看中文字幕！不要翻译！让孩子看图猜意思！
-</div>
+            <p><strong>Q：6个月真的能行吗？</strong><br>
+            A：行。<strong>每天2小时英语环境 × 180天 = 360小时</strong>，足够从"会单词"到"能对话"。关键是坚持。</p>
 
-<h3>3️⃣ RAZ绘本（每天10分钟，睡前）</h3>
+            <h2>💪 给妈妈的鼓励</h2>
+            <blockquote>
+                🌟 <strong>你不需要懂英语，你只需要懂孩子。</strong>
+                <br><br>
+                你的任务是：<strong>创造环境 + 维持习惯 + 给予鼓励</strong>。
+                <br><br>
+                剩下的，交给时间，交给外教，交给点读笔。
+                <br><br>
+                <strong>6个月后，你会看到一个能用英语自信表达的孙明阳。</strong> 🎉
+            </blockquote>
 
-<p><strong>📖 操作步骤：</strong></p>
-<ol>
-<li>🔊 用点读笔点一句，听一遍</li>
-<li>👆 家长指着图说一遍</li>
-<li>📄 翻页，<strong>不强迫孩子跟读</strong></li>
-<li>🔄 一本读<strong>3天</strong>，每天1遍</li>
-</ol>
+            <div class="motto">
+                <strong>🚀 冲刺口号</strong><br>
+                每天2小时，180天冲刺 ⏰<br>
+                停掉幼小衔接，全力攻英语 💪<br>
+                妈妈坐旁边，点读笔当老师 👩‍👦<br>
+                不求一步到位，只求每天进步 📈<br>
+                八月马来西亚，Year 2 不害怕 🌏
+            </div>
 
-<p><strong>🎯 进度目标：</strong></p>
-<ul>
-<li>📍 2-5月：完成A级（约100本）</li>
-<li>📍 6-7月：完成B级</li>
-<li>📍 8月：开始C级</li>
-</ul>
+        </div>
 
-<h3>4️⃣ 牛津树（周末，每天20分钟）</h3>
-
-<p><strong>🌳 操作步骤：</strong></p>
-<ol>
-<li>📖 L1是无字书，家长指着图讲故事（用简单英语）</li>
-<li>💬 "This is Biff. She is sad." "Why? Oh, her ball is lost."</li>
-<li>👆 让孩子指认："Where is the dog?" "Show me the red ball."</li>
-</ol>
-
-<h3>5️⃣ 家庭TPR指令（生活中每天做）</h3>
-
-<p><strong>🏠 只说这10句，前3个月不说别的：</strong></p>
-<table>
-<tr><th>场景</th><th>🗣️ 说这句</th><th>👋 配合动作</th></tr>
-<tr><td>起床</td><td>Time to wake up!</td><td>拉他起来</td></tr>
-<tr><td>穿衣服</td><td>Put on your shirt.</td><td>指衣服</td></tr>
-<tr><td>吃饭前</td><td>Wash your hands.</td><td>做洗手动作</td></tr>
-<tr><td>吃饭时</td><td>Sit down.</td><td>按他坐下</td></tr>
-<tr><td>出门</td><td>Let's go.</td><td>指门口</td></tr>
-<tr><td>回家</td><td>Take off your shoes.</td><td>做脱鞋动作</td></tr>
-<tr><td>睡觉</td><td>Time for bed.</td><td>指床</td></tr>
-<tr><td>喝水</td><td>Drink water.</td><td>做喝水动作</td></tr>
-<tr><td>上厕所</td><td>Go to the toilet.</td><td>指厕所</td></tr>
-<tr><td>帮忙</td><td>Help me.</td><td>招手</td></tr>
-</table>
-
-<div class="highlight">
-<strong>⚠️ 原则：</strong><br>
-✅ 只说一遍英语，同时做动作<br>
-❌ 不说中文翻译<br>
-✅ 孩子不执行，就拉着他执行<br>
-✅ 执行对了，竖大拇指（不强迫说Thank you）
-</div>
-
-<h2>✅ 每周检查清单</h2>
-
-<div class="success">
-<h3>📅 第1-4周（2-3月）🎯 建立习惯</h3>
-<ul class="checklist">
-<li>51Talk试听课完成，选好固定老师</li>
-<li>RAZ A级买到手，每天1本开始</li>
-<li>Peppa Pig S1E1看完3遍</li>
-<li>家庭TPR指令开始，每天至少用5句</li>
-</ul>
-</div>
-
-<div class="success">
-<h3>📅 第5-8周（3-4月）🎯 听懂基础指令</h3>
-<ul class="checklist">
-<li>外教课能听懂Stand up/Sit down/Touch your head</li>
-<li>RAZ A级完成30本</li>
-<li>能指认10个颜色、10个动物</li>
-<li>听到"Wash your hands"能自己去洗手</li>
-</ul>
-</div>
-
-<div class="success">
-<h3>📅 第9-12周（4-5月）🎯 开始整句输出</h3>
-<ul class="checklist">
-<li>能回答"What's your name?" "I'm Mingyang."</li>
-<li>能主动说"Toilet" "Water" "Help"</li>
-<li>RAZ A级完成，开始B级</li>
-<li>自然拼读8月前学完</li>
-</ul>
-</div>
-
-<div class="success">
-<h3>📅 第13-16周（5-6月）🎯 加强输出</h3>
-<ul class="checklist">
-<li>外教课能简单说整句："I like blue." "This is a cat."</li>
-<li>能听懂课堂指令：Line up, Open your book, Sit down</li>
-<li>RAZ B级进行中</li>
-</ul>
-</div>
-
-<div class="success">
-<h3>📅 第17-20周（6-7月）🎯 巩固+模拟</h3>
-<ul class="checklist">
-<li>模拟国际学校一天全英语环境</li>
-<li>能自我介绍："My name is Mingyang. I'm 7 years old. I like dogs."</li>
-<li>RAZ B级完成，开始C级</li>
-</ul>
-</div>
-
-<div class="success">
-<h3>📅 第21-24周（7-8月）🎯 冲刺</h3>
-<ul class="checklist">
-<li>复习所有课堂指令</li>
-<li>准备入学物品</li>
-<li>心理建设：看槟城国际学校视频</li>
-</ul>
-</div>
-
-<h2>⚠️ 重要提醒</h2>
-
-<h3>❌ 不要做</h3>
-<table>
-<tr><th>错误做法</th><th>为什么错</th></tr>
-<tr><td>🚫 翻译（说完英语又说中文）</td><td>破坏"英语↔图像"直接链接</td></tr>
-<tr><td>🚫 强迫跟读长句子</td><td>增加压力，导致抗拒</td></tr>
-<tr><td>🚫 一天看10集不同动画</td><td>成为背景噪音，无效输入</td></tr>
-<tr><td>🚫 问"你听懂了吗"</td><td>孩子不懂也会说懂了</td></tr>
-</table>
-
-<h3>✅ 一定要做</h3>
-<table>
-<tr><th>正确做法</th><th>效果</th></tr>
-<tr><td>⭐ 每天固定时间</td><td>形成习惯，减少谈判成本</td></tr>
-<tr><td>⭐ 大量重复</td><td>同一本书/动画看3遍以上</td></tr>
-<tr><td>⭐ 表扬努力</td><td>敢说就夸，不怕说错</td></tr>
-<tr><td>⭐ 保持耐心</td><td>前2个月可能看不出进步，第4个月爆发</td></tr>
-</table>
-
-<h2>🆘 紧急情况处理</h2>
-<table>
-<tr><th>问题</th><th>解决方案</th></tr>
-<tr><td>😭 孩子抗拒上课</td><td>换成游戏形式，或休息2天</td></tr>
-<tr><td>👨‍🏫 外教请假</td><td>51Talk换老师，或当天改看动画</td></tr>
-<tr><td>😫 妈妈累了</td><td>让孩子自己用点读笔看RAZ，休息一天没关系</td></tr>
-</table>
-
-<h2>📞 联系方式</h2>
-<table>
-<tr><th>平台</th><th>用途</th><th>联系方式</th></tr>
-<tr><td>🎧 51Talk客服</td><td>换老师、投诉、约课</td><td>APP内客服</td></tr>
-<tr><td>🛒 淘宝卖家</td><td>RAZ/牛津树售后</td><td>订单内联系</td></tr>
-</table>
-
-<hr style="border: none; border-top: 3px solid #eee; margin: 40px 0;">
-
-<h2>💪 妈妈加油</h2>
-
-<blockquote>
-<strong>记住：</strong>孩子6岁，语言吸收能力超强。<br><br>
-<strong>只要坚持6个月，每天2小时英语环境，8月入学肯定能跟上。</strong><br><br>
-<strong>关键是妈妈要坚持执行，不要三天打鱼两天晒网！</strong>
-</blockquote>
-
-<h3>🌟 成功口诀</h3>
-<div class="motto">
-每天三件宝：外教 + 动画 + 绘本<br>
-生活用TPR：指令 + 动作 + 不翻译<br>
-重复是关键：一书看三天，一集看三遍<br>
-坚持六个月，八月笑开颜
-</div>
-
-<div class="footer">
-🎯 加油，孙明阳妈妈！
-</div>
-
+        <div class="footer">
+            🎯 孙明阳，加油！妈妈，加油！我们一起冲！🔥
+        </div>
+    </div>
 </body>
 </html>
